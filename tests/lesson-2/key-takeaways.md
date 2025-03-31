@@ -121,6 +121,7 @@ Neu so chan, chia du cho 2 = 0; x % 2 === 0
 
 ## Conditional 
 Là điều kiện, dùng để kiểm tra có nên thực hiện đoạn logic không
+
 Cú pháp: if (<điều kiện>) { // code }. Nếu
 điều kiện đúng, sẽ chạy đoạn code
 
