@@ -60,8 +60,8 @@ node lesson-2/javascript/01-hello.js
 ## Variable
 Variable = biến, dùng để lưu trữ giá trị, có thể thay đổi giá trị được.
 Khai báo:
-- var <ten_bien> = <gia tri>;
--  let <ten_bien> = <gia tri>;
+- var <ten_bien> = <gia_tri>;
+-  let <ten_bien> = <gia_tri>;
 Note:
 
 Trong đó: <ten_bien>
