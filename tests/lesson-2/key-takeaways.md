@@ -116,21 +116,23 @@ Là toán tử só học
 
 ## Toan tu chia du
 % la toan tu chia du
+
 Neu so le, chia du cho 2 = 1; x % 2 === 1
+
 Neu so chan, chia du cho 2 = 0; x % 2 === 0
 
 ## Conditional 
 Là điều kiện, dùng để kiểm tra có nên thực hiện đoạn logic không
 
-Cú pháp: if (<điều kiện>) { // code }. Nếu
-điều kiện đúng, sẽ chạy đoạn code
+Cú pháp: if (<điều kiện>) { // code }. 
+
+Nếu điều kiện đúng, sẽ chạy đoạn code
 
 ## Loops
 - Dùng để thực hiện một đoạn logic một
 số lần nhất định
 - Cú pháp: for(<khởi tạo>; <điều
-kiện dừng>; <điều kiện tăng>) {
-// code }
+kiện dừng>; <điều kiện tăng>) {// code }
 - Ví dụ:
 for (let i = 1; i <= 10; i++) {
 console.log("Giá trị của i là: ", i);
@@ -140,8 +142,11 @@ console.log("Giá trị của i là: ", i);
 - Để in ra giá trị của biến.
 console.log(<variable_name>) 
 - Để in ra kết hợp giá trị kiểu chuỗi và giá trị của biến, ta có hai cách như sau:
-console.log(“Dùng dấu cộng như sau: “ + name)
-console.log(“Hoặc dùng dấu phẩy: “, name)
+  
+        console.log(“Dùng dấu cộng như sau: “ + name)
+
+        console.log(“Hoặc dùng dấu phẩy: “, name)
+
 - Để nối chuỗi từ hai biến, ta sử dụng dấu cộng (+):
   
     Ex:
