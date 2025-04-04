@@ -23,7 +23,7 @@ let student = {
         english: 7,
     }
 };
-console.log("Math:", student["gradeStudent"].math)
+console.log("Math:", student["gradeStudent"]["math"])
 //4
 const settings = {
     volume: 1000,

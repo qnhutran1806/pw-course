@@ -6,8 +6,8 @@ console.log(multiply(3, 7))
 //2
 function findMin(a, b, c) {
     let min = a;
-    if (b < min) min = b;
-    if (c < min) min = c;
+    if (b < min) {min = b;}
+    if (c < min) {min = c;}
     return min;
 };
 console.log(findMin(4, 9, 0));
