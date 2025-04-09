@@ -1,11 +1,14 @@
 # Git
-## Thay đổi commit message
+## Tạo một kho lưu trữ Git mới
+- git init
+
+## Thay đổi commit message, thay đổi thông tin commit cuối cùng mà không thay đổi nội dung commit
 - git commit --amend -m "message"
 
 ## Đưa từ vùng staging về working directory
 - git restore --staged <file>
 
-## Đưa từ vùng repository về working directory (uncommit)
+## Đưa từ vùng repository về working directory (uncommit), hoàn tác commit gần nhất, nhưng giữ lại các thay đổi trong working directory
 - git reset HEAD~1 (undo 1 commit) 
 
 ## Tạo branch 

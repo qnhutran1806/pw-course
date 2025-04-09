@@ -8,6 +8,11 @@ Type:
 
 # Git
 **Cách chạy project**
+-3 vùng trạng thái
+Sau khi khởi tạo, git sẽ có 3 vùng trạng thái:
+- Working directory
+- Staging: Vùng chứa các thay đổi đã được thêm vào nhưng chưa commit
+- Repository
 
 Khởi tạo thư mục quản lý bởi git: git init
 
@@ -25,18 +30,18 @@ Xem trạng thái file: git status
     - File màu xanh: vùng staging
     - File màu đỏ: vùng working 
 
-Commit: git commit -m”message”
+**Commit: git commit -m”message”**
 
-Kiểm tra lịch sử commit: git log
+**Kiểm tra lịch sử commit: git log**
 
 **Commit convention**
 
 Cu phap: type : <short_description>
 - Trong đó:
     - type: loại commit
-        - chore: sửa nhỏ lẻ, chính tả, xóa file không dùng tới,...
-        - feat: thêm tính năng mới, test case mới
-        - fix: sửa lỗi 1 test trước đó
+        - **chore**: sửa nhỏ lẻ, chính tả, xóa file không dùng tới,...
+        - **feat**: thêm tính năng mới, test case mới
+        - **fix**: sửa lỗi 1 test trước đó
     - short_description: mô tả ngắn gọn(50 kí tự), tiếng Anh hoặc tiếng Việt không dấu.
 
 **Simple Workflow**
