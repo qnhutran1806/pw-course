@@ -77,6 +77,7 @@
     - const obj = {a: 1, b: 2, c: 3};
     - for (let key in obj) {console.log(key);}
     - Kết quả: a b c
+
 ## Vòng lặp for...of
 - Cú pháp: for(const item of <tên_biến_của_mảng>) {//code ở đây}
 - Trong đó:
@@ -92,27 +93,26 @@
     - const str='Hello'
     - for (const char of str) {console.log(char)}
     - Kết quả H e l l o
+
 ## Break
 - Dùng để thoát khoải vòng lặp hoặc mệnh đề switch. Thường kết hợp với một điều kiện để dừng vòng lặp sớm hơn khi đã khỏa mãn điều kiện
 - break thường được dùng khi bạn muốn tìm kiếm một giá trị cụ thể trong một mảng hoặc một tập hợp dữ liệu và bạn muốn dừng lại khi tìm thấy giá trị đó
 - Sử dụng break giúp tránh việc thực hiện các phép tính không cần thiết sau khi đã đạt được mục tiêu
 - Khi sử dụng break trong các vòng lặp lồng vào nhau, nó chỉ thoát khỏi vòng lặp gần nhất chứa nó
 ## Continue
-- continue dùng để bỏ qua phần còn lại của vòng lặp hiện tại và chuyển sang lần lặp
-tiếp theo.
+- continue dùng để bỏ qua phần còn lại của vòng lặp hiện tại và chuyển sang lần lặp tiếp theo.
 - continue giúp bạn bỏ qua một số trường hợp cụ thể trong vòng lặp mà không cần thoát khỏi vòng lặp hoàn toàn
 
 # String ulti function
 ## trim()
 - Dùng để loại bỏ khoảng trắng ở đầu và ở cuối chuỗi. Khoảng trắng bao gồm dấu cách, dấu tab, các kí tự không in khác
-- 
+
 ## toLowerCase() và toUperCase()
 - toLowerCase() chuyển đổi tất cả các ký tự trong chuỗi thành chữ thường.
 - toUpperCase() chuyển đổi tất cả các ký tự trong chuỗi thành chữ hoa.
 
 ## includes()
-- kiểm tra xem một chuỗi có chứa một chuỗi con
-(substring) hay không.
+- kiểm tra xem một chuỗi có chứa một chuỗi con (substring) hay không.
 - Nó trả về true nếu tìm thấy và false nếu không.
 
 ## replace()
@@ -127,8 +127,7 @@ tiếp theo.
     - console.log(words); // Kết quả:["JavaScript", "is", "awesome!"]
 
 ## substring()
-- Trả về một phần của chuỗi, bắt đầu từ chỉ số
-(index) được chỉ định đến một chỉ số khác hoặc đến cuối chuỗi.
+- Trả về một phần của chuỗi, bắt đầu từ chỉ số (index) được chỉ định đến một chỉ số khác hoặc đến cuối chuỗi.
 - Ví dụ: 
   - let str = "Hello World!";
   - console.log(str.substring(0, 5)); // Kết quả: "Hello"
@@ -150,8 +149,7 @@ tiếp theo.
   - console.log(squared); // Kết quả: [2, 4, 6, 8]
 
 ## filter()
-- Tạo ra một mảng mới chỉ bao gồm các phần tử
-thỏa mãn điều kiện được chỉ định trong hàm callback.
+- Tạo ra một mảng mới chỉ bao gồm các phần tử thỏa mãn điều kiện được chỉ định trong hàm callback.
 - Ví dụ: 
   - let numbers = [1, 2, 3, 4];
   - let evenNumbers = numbers.filter(num => num % 2 === 0);
@@ -207,3 +205,20 @@ thỏa mãn điều kiện được chỉ định trong hàm callback.
   - let numbers = [4, 2, 3, 1];
   - numbers.sort();
   - console.log(numbers); // Kết quả: [1, 2, 3, 4]
+
+## toString() / join()
+- Chuyển đổi mảng thành chuỗi
+- Điểm khác biệt là hàm toString bạn không thể tùy chọn ký tư ngăn cách, còn hàm join thì được.
+  - var a = ['Wind', 'Water', 'Fire'];
+  - a.join();      // 'Wind,Water,Fire'
+  - a.join(', ');  // 'Wind, Water, Fire'
+  - a.join(' + '); // 'Wind + Water + Fire'
+  - a.join('');    // 'WindWaterFire'
+
+## reserve()
+- Đảo ngược mảng
+
+### Gặp chuỗi là JavaScript tự động ép kiểu sang chuỗi rồi nối.
+- "35" + 5 → 355
+- 5 + 5 + "3" -> 103
+
