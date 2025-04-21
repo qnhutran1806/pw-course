@@ -41,16 +41,34 @@
 - console.log(“Toi ten la” + name + “”)
 
 ## Objet
-### Object = đối tượng, dùng để lưu trữ tập hợp các giá trị vào cùng một biến và hằng số
+### Object = đối tượng, dùng để lưu trữ tập hợp các giá trị vào cùng một biến và hằng số. Một tập hợp giá trị dưới dạng key-value
 Khai báo: let/const <ten_object> = { <thuoc_tinh>: <gia_tri>,...}
 Trong đó:
 - <thuoc_tinh>: giống quy tắc đặt tên biến
 - <gia_tri>: có kiểu giống biến, hoặc là 1 object khác.
 
+- Key cũng có thể gọi là thuộc tính của object
+- Kiểu dữ liệu của key luôn là string
+- Kiểu dữ liệu value có thể là bất cứ kiểu dữ liệu nào đã học: string, number, boolean, null, object, arr,...
+- In value
+  - const sv1 = {"ID": 1, "name": Alex}
+  - console.log(sv1.ID)
+  - console.log(sv1["name"])
+- Thêm thuộc tính
+  - sv1.age = 8;
+  - sv1["Class new"] = "ABC";
+  - Kết quả: {"ID": 1, "name": Alex, age: 8, "Class new": "ABC"}
+- Xóa thuộc tính: delete sv1.age 
+- Nếu hằng số là một object, ta có thể thay đổi giá trị của thuộc tính
+  - const student = { id: 10, name: "Alex"}
+  - student.id = 11
+  - student.name = "Nagi"
+
 ## Logical operator
 - && : cả 2 vế của mệnh đề đều đúng
 - || : một trong 2 vế đúng
 - ! : đảo ngược lại giá trị của mệnh đề
+
 
 ## Array
 - Tạo mảng
@@ -88,10 +106,22 @@ Giải thích:
 - Mảng numberArr chứa các dữ liệu kiểu số.
 - Mảng strArr chứa các dữ liệu kiểu chuỗi.
 - Mảng mixedArr chứa các dữ liệu kiểu hỗn hợp: chuỗi, số, boolean, object.
+### Thao tác trên mảng
+- Lấy độ dài của mảng: arr.length
+  - VD: const arr = [0,1,2]
+  - console.log(arr.length)
+  - 3
+- Truy xuất phần tử mảng: arr[index]
+- Thêm phần tử vào mảng 
+  - Thêm vào đầu mảng: **unshift()**
+  - Thêm vào cuối mảng: **push()**
+- Xóa phần tử của mảng
+  - Xóa ở đầu mảng: **shift()**
+  - Xóa ở cuối mảng: **pop()**
 
-## Array
+## Function
 ### Function = hàm, là đoạn code được đặt tên và có thể tái sử dụng, thực hiện 1 nhiệm vụ hoặc 1 tính toán cụ thể.
-Khai báo function <name_Function> ()
+Khai báo: function <name_Function> (<danh_sách_tham_số>)
 {
     //code
 }

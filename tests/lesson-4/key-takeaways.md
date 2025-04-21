@@ -33,6 +33,7 @@
 - Lưu ý
   - Mỗi case cần có **break** để thoát khỏi đoạn logic của case. Nếu không có break đoạn logic của case phía dưới sẽ tiếp tục được chạy
   - **default** là case mặc định. Trong trường hợp nếu không có case nào match, logic default sẽ được chạy
+
 ## Toán tử so sánh
 - > Phép so sánh lớn hơn
 - < Phép so sánh nhỏ hơn
@@ -42,6 +43,7 @@
 - === Phép so sánh bằng, so sánh cả về giá trị và kiểu dữ liệu
 - != Phép so sánh khác, chỉ so sánh về giá trị, không so sánh về kiểu dữ liệu
 - !== Phép so sánh khác, so sánh cả về giá trị và về kiểu dữ liệu
+
 ## Vòng lặp forEach
 - Cú pháp: <biến_là_tên_mảng>.forEach(callbackFn)
 - Trong đó
@@ -59,6 +61,7 @@
   - Trong callback function nếu chỉ có duy nhất, có thể bỏ cặp ngoặc nhọn bao ngoài
     - Đẩy đủ: numberArr.forEach(number => {console.log(number)})
     - Rút gọn: numberArr.forEach(number => console.log(number));
+
 ## Vòng lặp for...in
 - Cú pháp: for(const property in object){//code ở đây}
 - Trong đó
@@ -102,22 +105,27 @@ tiếp theo.
 # String ulti function
 ## trim()
 - Dùng để loại bỏ khoảng trắng ở đầu và ở cuối chuỗi. Khoảng trắng bao gồm dấu cách, dấu tab, các kí tự không in khác
+- 
 ## toLowerCase() và toUperCase()
 - toLowerCase() chuyển đổi tất cả các ký tự trong chuỗi thành chữ thường.
 - toUpperCase() chuyển đổi tất cả các ký tự trong chuỗi thành chữ hoa.
+
 ## includes()
 - kiểm tra xem một chuỗi có chứa một chuỗi con
 (substring) hay không.
 - Nó trả về true nếu tìm thấy và false nếu không.
+
 ## replace()
 - Phương thức replace() dùng để thay thế một chuỗi con trong chuỗi bằng một chuỗi khác.
 - Bạn có thể thay thế chỉ chuỗi đầu tiên hoặc tất cả chuỗi con bằng cách sử dụng biểu thức chính quy.
+
 ## split()
 - chia một chuỗi thành một mảng các chuỗi con, dựa trên một ký tự (delimiter).
 - Ví dụ:
     - let str = "JavaScript is awesome!";
     - let words = str.split(" ");
     - console.log(words); // Kết quả:["JavaScript", "is", "awesome!"]
+
 ## substring()
 - Trả về một phần của chuỗi, bắt đầu từ chỉ số
 (index) được chỉ định đến một chỉ số khác hoặc đến cuối chuỗi.
@@ -125,6 +133,7 @@ tiếp theo.
   - let str = "Hello World!";
   - console.log(str.substring(0, 5)); // Kết quả: "Hello"
   - console.log(str.substring(6)); // Kết quả: "World!"
+
 ## indexOf()
 - Trả về vị trí xuất hiện đầu tiên của một chuỗi con trong chuỗi, hoặc -1 nếu không tìm thấy.
 - Ví dụ
@@ -139,6 +148,7 @@ tiếp theo.
   - let numbers = [1, 2, 3, 4];
   - let squared = numbers.map(num => num * 2);
   - console.log(squared); // Kết quả: [2, 4, 6, 8]
+
 ## filter()
 - Tạo ra một mảng mới chỉ bao gồm các phần tử
 thỏa mãn điều kiện được chỉ định trong hàm callback.
@@ -146,12 +156,14 @@ thỏa mãn điều kiện được chỉ định trong hàm callback.
   - let numbers = [1, 2, 3, 4];
   - let evenNumbers = numbers.filter(num => num % 2 === 0);
   - console.log(evenNumbers); // Kết quả: [2, 4]
+
 ## find()
 - Trả về giá trị của phần tử đầu tiên trong mảng thỏa mãn điều kiện được chỉ định trong hàm callback, nếu không có phần tử nào thỏa mãn thì trả về undefined.
 - Ví dụ
   - let numbers = [1, 2, 3, 4];
   - let firstEven = numbers.find(num => num % 2 === 0);
   - console.log(firstEven); // Kết quả: 2
+
 ## reduce()
 - Áp dụng một hàm lên từng phần tử của mảng (từ trái qua phải) để trả về một giá trị duy nhất
 - Ví dụ:
@@ -162,21 +174,24 @@ thỏa mãn điều kiện được chỉ định trong hàm callback.
   - total: biến nhận giá trị duy nhất
   - num: phần tử của mảng
   - 0 giá trị khởi tạo cho biến total
+
 ## some()
 - Kiểm tra xem có ít nhất một phần tử trong mảng thỏa mãn điều kiện được chỉ định trong hàm callback. Trả về true nếu tìm thấy, ngược lại trả về false.
 - Ví dụ
   - let numbers = [1, 2, 3, 4];
   - let hasEven = numbers.some(num => num % 2 === 0);
   - console.log(hasEven); // Kết quả: true
+
 ## every()
 - Kiểm tra xem tất cả các phần tử trong mảng có thỏa mãn điều kiện được chỉ định trong hàm callback hay không. Trả về true nếu tất cả đều thõa mản, ngược lại trả về false
 - Ví dụ
   - let numbers = [2, 4, 6, 8];
   - let allEven = numbers.every(num => num % 2 === 0);
   - console.log(allEven); // Kết quả: true
+
 ## push()
-- Thêm một hoặc nhiều phần tử vào cuối mảng và
-trả về độ dài mới của mảng.
+- Thêm một hoặc nhiều phần tử vào cuối mảng và trả về độ dài mới của mảng.
+
 ## shift()
 - Loại bỏ phần tử đầu tiên của mảng và trả về phần tử bị loại bỏ. Phương thức này thay đổi độ dài của mảng
 - Ví dụ 
@@ -184,6 +199,7 @@ trả về độ dài mới của mảng.
   - let firstElement = numbers.shift();
   - console.log(firstElement); // Kết quả: 1
   - console.log(numbers); // Kết quả: [2, 3]
+
 ## sort()
 - Sắp xếp các phần tử của mảng theo thứ tự tăng dần hoặc theo hàm so sánh được cung cấp. Nó thay đổi mảng ban đầu.
 - mặc định sắp xếp các phần tử của mảng như chuỗi theo thứ tự từ điển học Unicode (ASCII hoặc UTF-16). Điều này có nghĩa là mỗi phần tử sẽ được chuyển đổi thành chuỗi (nếu không phải là chuỗi) trước khi so sánh

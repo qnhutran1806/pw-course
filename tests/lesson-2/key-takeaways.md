@@ -71,15 +71,22 @@ Note:
 
 Trong đó: <ten_bien>
 
-    -  Bắt đầu bằng ký tự chữ, hoặc gạch dưới, hoặc $
-    - KHÔNG chứa dấu cách
-    -  KHÔNG là các "từ khóa", tức là các từ đã có trong Javascript (ví dụ: var, let, for, if,...)
+   - Bắt đầu bằng ký tự chữ, hoặc gạch dưới hoặc $
+   - KHÔNG được bắt đầu bằng số  
+   - KHÔNG được chứa các kí tự toán học logic (+ * < > ...)
+   - KHÔNG chứa dấu cách
+   - KHÔNG là các "từ khóa", tức là các từ đã có trong Javascript (ví dụ: var, let, for, if,...)
+   - **Lưu ý:** tên biến không được trùng nhau
 Phạm vi của biến
 
     - var: phạm vi toàn cục (global)
     - let: phạm vi trong cặp ngoặc {}
   
-Nên dùng: let, vì dễ kiểm soát phạm vi của biến    
+- Nên dùng: let, vì dễ kiểm soát phạm vi của biến  
+- Để thay đổi giá trị của biến, ta thực hiện gán lại giá trị của biến sang giá trị khác mà không cần từ khoá var/let. 
+  - var name = “Playwright”;
+  - name = “Playwright Việt Nam”;
+
 
 ## Constant 
 Là hằng số, dùng để khai báo các giá trị không thể thay đổi
@@ -87,18 +94,32 @@ Là hằng số, dùng để khai báo các giá trị không thể thay đổi
 *Note*
 
 Khi nào dùng var/let, khi nào dùng const?
-   -  var/let: khi biến sẽ gán lại
+   - var/let: khi biến sẽ gán lại
    - const: khi biến không gán lại
    - Thường sẽ dùng let và const, KHÔNG dùng var
 
 ## Data type
 Là kiểu dữ liệu
 
-Có 8 loại kiểu dữ liệu: String, Number, Bigint, Boolean, Undefined, Null, Symbol, Object.
+Nhóm kiểu dữ liệu nguyên thủy: String, Number, Boolean, Undefined, Null, Symbol.
 
--  Kiểu String: dùng để khai báo một chuỗi
+-  Kiểu String: dùng để khai báo một chuỗi, dạng văn bản. Có thể lưu giá trị kiểu chuỗi nằm trong cặp ngoặc kép hoặc ngoặc đơn
 -  Kiểu Number: dùng để khai báo một số.
--  Kiểu Boolean: dùng để khai báo một giá trị kiểu đúng sai (true hoặc false):
+-  Kiểu Boolean: dùng để khai báo một giá trị kiểu đúng sai (true hoặc false), Thường được dùng trong câu điều kiện
+-  Kiểu undefined: đại diện cho giá trị chưa được định nghĩa
+   -  VD: var name = undefined; console.log(name)
+- Kiểu null: đại diện cho giá trị rỗng -  không chứa gì cả
+
+Nhóm kiểu dữ liệu đối tượng: đây là các kiểu dữ liệu cho người dùng tự tạo ra
+
+## Các kí tự đặc biệt
+- Bạn cần dùng kí tự escape \ đứng trước
+- Kí tự \: \\
+- Kí tự nháy đơn: \’
+- Kí tự nháy kép: \”
+- Kí tự xuống dòng: \n
+- Kí tự đầu dòng: \r
+- Kí tự tab: \t
 
 ## Comparison operator
 Là toán tử so sánh, dùng để so sánh giá trị giữa 2 biến với nhau. Kết quả trả về Boolean 
@@ -106,6 +127,12 @@ Là toán tử so sánh, dùng để so sánh giá trị giữa 2 biến với n
 Các toán tử so sánh:
 - So sánh hơn kém: >, <
 - So sánh bằng: ==, ===, !=, !==, >=, <=
+
+Lưu ý
+- == Phép so sánh bằng, chỉ so sánh giá trị, không so sánh về kiểu dữ liệu
+- === Phép so sánh bằng, so sánh cả về giá trị và về kiểu dữ liệu
+- != Phép so sánh khác, chỉ so sánh về giá trị, không so sánh về kiểu dữ liệu
+- !== Phép so sánh khác, so sánh cả về giá trị và về kiểu dữ liệu
 
 ## Unary operator
 Là toán tử 1 ngôi
@@ -164,4 +191,9 @@ console.log(<variable_name>)
 - Comment code 
   - Ctrl + / 
   - Shift + Alt + A
+
+## Toán tử chia dư %
+-   Nếu số lẻ chia cho 2 = 1: x % 2 === 1
+-   Nếu só chẵn chia cho 2 = 0: x % 2 === 0
+
 
