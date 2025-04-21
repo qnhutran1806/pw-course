@@ -20,11 +20,14 @@ test("To do list Page", async ({ page }) => {
     // Duyệt từ cuối danh sách xuống để tránh lỗi khi xóa làm thay đổi index
     for (let i = count - 1; i >= 0; i--) {
         if (i % 2 === 0) {
-            page.once('dialog', async (dialog) => {
+            page.on('dialog', async (dialog) => {
                 await dialog.accept();
             });
             await test.step('Click Delete button', async () => {
                 await page.locator(`button[onclick="deleteTask(${i})"]`).click();
+                // for (let i = 1; i <= 100; i++)
+                // if (i % 2 !== 0)
+                // await page.locator(`//button[@id="todo-${i}-delete"]`).click();
             })
         }
     }

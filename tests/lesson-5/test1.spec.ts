@@ -8,10 +8,10 @@ test("Register Page", async ({ page }) => {
         await page.locator("//a[@href='01-xpath-register-page.html']").click();
     })
     await test.step('Input username', async () => {
-        await page.locator("//input[@name='username']").pressSequentially('Nhu Tran', { delay: 100 });
+        await page.locator("//input[@name='username']").fill('Nhu Tran');
     })
     await test.step('Input email', async () => {
-        await page.locator("//input[@name='email']").pressSequentially('qnhutran1806@gmail.com', { delay: 100 });
+        await page.locator("//input[@name='email']").fill('qnhutran1806@gmail.com');
     })
     await test.step('Choose gender', async () => {
         await page.locator("//input[@id='female']").check();
