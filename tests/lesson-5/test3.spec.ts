@@ -23,8 +23,9 @@ test("To do list Page", async ({ page }) => {
             page.once('dialog', async (dialog) => {
                 await dialog.accept();
             });
-            // Click nút có onclick="deleteTask(i)"
-            await page.locator(`button[onclick="deleteTask(${i})"]`).click();
+            await test.step('Click Delete button', async () => {
+                await page.locator(`button[onclick="deleteTask(${i})"]`).click();
+            })
         }
     }
 
